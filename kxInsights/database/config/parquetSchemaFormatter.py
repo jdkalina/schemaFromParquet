@@ -61,7 +61,7 @@ def fromParquet(directory):
     jsonFile = []
     for file in files:
         fn = file.split('.')[0].replace('_','')
-        data=schema_from_parquet(f'{base_dir}\\{file}')
+        data=schema_from_parquet(f'{directory}\\{file}')
         timeCol = pick_time(fn, data)
         print(timeCol)
         tbl = table_creator(fn, data, timeCol)
