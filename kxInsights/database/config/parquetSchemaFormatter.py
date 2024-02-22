@@ -27,7 +27,6 @@ def table_creator(tableName, columns, timeCol):
         "columns": columns,
         "primaryKeys": [], 
         "type": "partitioned",
-        "updTsCol": timeCol,
         "prtnCol": timeCol,
         "name": tableName,
         "sortColsDisk": [timeCol],
